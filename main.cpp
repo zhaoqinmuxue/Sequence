@@ -9,6 +9,7 @@ int main()
     clock_t start,finish;
     start = clock();
     Sequence test("dna.txt");
+    cout << "length: " << test.length() << endl;
     cout << "A: " << test.numberOf('A') << "   " << "G: " << test.numberOf('G') << "   "
 	 << "C: " << test.numberOf('C') << "   " << "T: " << test.numberOf('T') << endl;
     cout << test.longestConsecutive() << endl;
