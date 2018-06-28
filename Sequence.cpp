@@ -65,6 +65,7 @@ Sequence::Sequence(string filename):counts(0),A(0),G(0),C(0),T(0),zui_s(0),zui_e
 	    }
 	}
     }
+    DNA[counts] = '\0';
     fin.close();
 }
 
