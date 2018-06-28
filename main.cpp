@@ -9,13 +9,12 @@ int main()
     clock_t start,finish;
     start = clock();
     Sequence test("dna.txt");
-    // for (int i = 0;i < test.DNA.size();i++)
-    // cout << test.DNA[i];
-    cout << endl;
-    cout << "A: " << test.A << "  " << "G: " << test.G << "  " << "C: " << test.C << "  " << "T: " << test.T << endl;
-    for (int i = test.zui_s;i < test.zui_e;i++)
-    cout << test.DNA[i];
-    cout << endl;
+    cout << "A: " << test.numberOf('A') << "   " << "G: " << test.numberOf('G') << "   "
+	 << "C: " << test.numberOf('C') << "   " << "T: " << test.numberOf('T') << endl;
+    cout << test.longestConsecutive() << endl;
+    finish = clock();
+    cout << (double)(finish-start)/CLOCKS_PER_SEC << endl;
+    cout << test.longestRepeated() << endl;
     finish = clock();
     cout << (double)(finish-start)/CLOCKS_PER_SEC << endl;
     return 0;
