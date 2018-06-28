@@ -3,15 +3,17 @@
 
 #include <iostream>
 #include <fstream>
-#include <string>
-#include <vector>
+#include <string.h>
+#include <algorithm>
 
 using namespace std;
 
 class Sequence
 {
-    public:
-        vector<char> DNA;
+    private:
+        char* DNA;
+        char** a;
+        int counts;
         int A;
         int G;
         int C;
@@ -19,8 +21,12 @@ class Sequence
 	int zui_s;
  	int zui_e;
     public:
-        Sequence(char* failname);
-        ~Sequence(){}
+        Sequence(string failname);
+        ~Sequence(){delete[] DNA,a;}
+        int length()	{return counts;}
+        int numberOf(char base);
+        string longestConsecutive();
+        string longestRepeated();
 };
 
 #endif
